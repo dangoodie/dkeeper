@@ -30,6 +30,7 @@ function App() {
         return index !== id;
       });
     });
+    dkeeper.removeNote(id);
   }
 
   return (

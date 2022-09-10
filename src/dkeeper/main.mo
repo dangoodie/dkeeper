@@ -25,4 +25,10 @@ actor DKeeper {
     return List.toArray(notes);
   };
 
+  public func removeNote(id: Nat) {
+    let takeNotes = List.take(notes, id);
+    let dropNotes = List.drop(notes, id + 1);
+    notes := List.append(takeNotes, dropNotes);
+  }
+    
 }
